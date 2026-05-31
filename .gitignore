@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+
+# Token Saver working artifacts (extracted slices, chunks, tables)
+slice.txt
+chunks/
+tables/
+*.extracted.*
+q.txt
+
+# Secrets / env
+.env
+*.key
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
