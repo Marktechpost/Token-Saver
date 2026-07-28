@@ -1,0 +1,22 @@
+# Token Saver — server dependencies, for the DEVELOPER venv only.
+#
+# NOT an install path. Users install the .mcpb extension, and `uv` resolves the
+# real dependency set from pyproject.toml inside the bundle. This file exists so
+# scripts/install.sh can build a local .venv for the test suite; keep it in sync
+# with [project.dependencies] in pyproject.toml.
+#
+# For a full developer checkout (the pdf_inspect table CLI and the
+# token-measurement eval harness) install the complete set instead:
+#     pip install -r requirements.txt
+#
+# pypdfium2 is optional: when present, index_store.py prefers it for higher-
+# quality text extraction; if it is missing the code falls back to pypdf. It is
+# included here because it is a small, torch-free wheel that improves accuracy.
+
+mcp>=1.2                    # Model Context Protocol server SDK (FastMCP)
+sentence-transformers>=2.6  # local embedding model (all-MiniLM-L6-v2)
+numpy>=1.24                 # vector math for cosine scoring
+pypdf>=4.0                  # PDF text + outline extraction
+pypdfium2>=4                # optional: higher-quality text extractor (auto-preferred)
+tiktoken>=0.5               # accurate token counting for the savings figures
+                            #   (optional: falls back to a chars/4 estimate if absent)

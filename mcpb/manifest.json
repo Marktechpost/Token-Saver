@@ -1,0 +1,50 @@
+{
+  "$schema": "https://raw.githubusercontent.com/anthropics/mcpb/main/schemas/mcpb-manifest-v0.4.schema.json",
+  "manifest_version": "0.4",
+  "name": "token-saver-ccr",
+  "display_name": "Token Saver",
+  "version": "0.3.0",
+  "description": "Ask questions about big PDFs locally — only a tiny, page-cited slice is sent to the model, not the whole document.",
+  "long_description": "Token Saver keeps your document on your machine, finds just the passages that answer your question with a local embedding model, and returns only those (with page numbers). Faster, cheaper, page-cited answers; the document never leaves your computer. Uses the uv runtime — Python dependencies are installed automatically on first use.",
+  "author": { "name": "raiarnav02" },
+  "icon": "icon.png",
+  "homepage": "https://github.com/raiarnav02/token-saver-demo",
+  "license": "MIT",
+  "server": {
+    "type": "uv",
+    "entry_point": "scripts/mcp_server.py",
+    "mcp_config": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--project",
+        "${__dirname}",
+        "token-saver-mcp",
+        "${user_config.allowed_directories}"
+      ]
+    }
+  },
+  "tools": [
+    { "name": "ask", "description": "Answer a question about a document, finding and loading it from a name or loose reference (no path needed)." },
+    { "name": "list_documents", "description": "List the PDFs available in the approved folder(s), newest first." },
+    { "name": "ingest", "description": "Load a PDF into the local in-memory index (extract, chunk, embed)." },
+    { "name": "search", "description": "Return only the top-K relevant chunks, each with a page citation." },
+    { "name": "clear", "description": "Drop one document from memory, or clear everything and reset the savings counter." },
+    { "name": "status", "description": "List what documents are currently loaded and their idle time." },
+    { "name": "savings", "description": "Report how many tokens this session saved vs. pasting the whole document." }
+  ],
+  "user_config": {
+    "allowed_directories": {
+      "type": "directory",
+      "title": "Your documents folder (required)",
+      "description": "Best practice: make a NEW, small folder just for this (e.g. a \"Token Saver\" folder) and put only the PDFs you want to ask about inside it. Avoid huge, busy folders like all of Documents or Downloads — a smaller folder is faster to search and lets Claude see your files more clearly. Token Saver can ONLY read files inside the folder you pick, and it lets you ask by name (\"my lease agreement\") instead of typing file paths. You can select more than one.",
+      "multiple": true,
+      "required": true,
+      "default": ["${HOME}/Documents/Token Saver"]
+    }
+  },
+  "compatibility": {
+    "platforms": ["darwin", "win32", "linux"],
+    "runtimes": { "python": ">=3.10,<4.0" }
+  }
+}

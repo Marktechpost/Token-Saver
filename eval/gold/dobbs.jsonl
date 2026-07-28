@@ -1,0 +1,13 @@
+// DRAFT gold for dobbs.pdf (sha256 24e1b1...) — pages are PDF page indexes,
+// grounded via `pdf_inspect.py search` against the EXTRACTED text (not eyeballed).
+// TODO human-verify: open each page and confirm it answers the question.
+{"q": "how does the opinion treat stare decisis", "pages": [4, 7, 11]}
+{"q": "what standard of review now applies to state abortion regulations", "pages": [1, 7, 16, 85]}
+{"q": "what happens to the undue burden test", "pages": [6, 54, 64]}
+{"q": "who gets to decide abortion policy after this ruling", "pages": [1, 4, 5]}
+{"q": "reliance interests discussion", "pages": [6, 71, 72]}
+{"q": "deeply rooted in history and tradition test", "pages": [13, 20, 21]}
+{"q": "what was the line Roe drew between permitted and prohibited abortions", "pages": [5, 6, 10]}
+{"q": "which state law was being challenged in this case", "pages": [1, 8, 9]}
+{"q": "Washington v. Glucksberg", "pages": [13, 20, 21]}
+{"q": "Gestational Age Act legislative findings", "pages": [8]}

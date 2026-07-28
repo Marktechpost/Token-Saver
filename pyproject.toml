@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "token-saver-ccr"
+version = "0.3.0"
+description = "Accuracy-preserving, token-minimal retrieval over large PDFs — a local, on-device MCP server for Claude Desktop."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "raiarnav02" }]
+keywords = ["mcp", "rag", "retrieval", "pdf", "embeddings", "claude", "tokens"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+# Core = the MCP-server path (what the .mcpb and Claude Desktop need). Mirrors
+# requirements-mcp.txt. Everything heavier is an optional extra so a plain
+# `pip install token-saver-ccr` stays as small as the server allows.
+dependencies = [
+    "mcp>=1.2",
+    "sentence-transformers>=2.6",
+    "numpy>=1.24",
+    "pypdf>=4.0",
+    "pypdfium2>=4",
+    "tiktoken>=0.5",
+]
+
+[project.optional-dependencies]
+# Developer extras beyond the server: the pdf_inspect table CLI and the eval
+# token-measurement harness. Not needed to run the extension.
+dev = [
+    "pdfplumber>=0.11",   # scripts/pdf_inspect.py — extract tables to CSV
+    "anthropic>=0.34",    # eval/measure_tokens.py — live A/B token harness
+]
+
+[project.scripts]
+# The ONE entry point the .mcpb launches: the manifest runs
+#   uv run --project <bundle> token-saver-mcp <allowed folders>
+# Do not add CLI entry points here — the bundle ships only the server modules,
+# so an entry point for a module that isn't bundled would be dead on arrival.
+token-saver-mcp = "token_saver.mcp_server:main"
+
+[project.urls]
+Homepage = "https://github.com/raiarnav02/token-saver-demo"
+
+# The code lives in scripts/ but installs as the importable package `token_saver`.
+# The modules' runtime `sys.path.insert(__file__ dir)` keeps their flat sibling
+# imports working under either name, so no import rewrite is needed.
+[tool.setuptools]
+packages = ["token_saver"]
+package-dir = { "token_saver" = "scripts" }

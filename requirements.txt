@@ -1,0 +1,29 @@
+# Token Saver — Python dependencies
+#
+# The shipped product is the .mcpb extension; `uv` resolves its deps from
+# pyproject.toml at first run, so END USERS install nothing from here. This file
+# is for a DEVELOPER checkout: the server, the pdf_inspect CLI, and the eval
+# harness. The lean server-only set is in requirements-mcp.txt.
+
+# --- Core: the MCP server (scripts/mcp_server.py) ---
+mcp>=1.2                 # Model Context Protocol server SDK (FastMCP)
+pypdf>=4.0               # PDF text + outline extraction
+sentence-transformers>=2.6  # local embedding model (all-MiniLM-L6-v2)
+numpy>=1.24              # vector math for cosine scoring
+
+# --- Optional: higher-quality text extractor for the index ---
+# When importable, index_store.py prefers pypdfium2 for per-page text (better
+# layout fidelity, permissive license); pypdf is the fallback. Override with
+# TOKEN_SAVER_EXTRACTOR=pypdf|pypdfium. Outline is always read via pypdf.
+pypdfium2>=4             # optional: preferred index extractor
+
+# --- Optional: accurate token counting for the savings figures ---
+# tiktoken (cl100k_base) replaces the rough chars/4 estimate so the reported
+# tokens/dollars aren't inflated. Falls back to chars/4 if not installed.
+tiktoken>=0.5
+
+# --- Dev CLI: table extraction (scripts/pdf_inspect.py) ---
+pdfplumber>=0.11         # extract tables from a PDF -> CSV
+
+# --- Eval harness only (eval/measure_tokens.py) ---
+anthropic>=0.34          # only needed to run the live token-measurement A/B harness

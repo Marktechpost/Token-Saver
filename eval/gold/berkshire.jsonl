@@ -1,0 +1,13 @@
+// DRAFT gold for berkshire.pdf (sha256 2132b8...) — pages are PDF page indexes,
+// grounded via `pdf_inspect.py search` against the EXTRACTED text (not eyeballed).
+// TODO human-verify: open each page and confirm it answers the question.
+{"q": "what is insurance float", "pages": [16, 20, 27]}
+{"q": "operating earnings reported for recent years", "pages": [6, 13]}
+{"q": "share repurchases during the year", "pages": [10, 11]}
+{"q": "investments in five large Japanese companies", "pages": [12, 13]}
+{"q": "who was the architect of Berkshire Hathaway", "pages": [3, 4, 5]}
+{"q": "Pilot Travel Centers stake", "pages": [31, 35]}
+{"q": "how capital intensive is the railroad business", "pages": [13, 14]}
+{"q": "does the company pay a dividend", "pages": [10]}
+{"q": "money held by insurers that will eventually go to others", "pages": [20, 27]}
+{"q": "dangerous products carried by rail", "pages": [15]}
