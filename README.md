@@ -1,11 +1,6 @@
 # Token Saver
 
-A local Claude Desktop extension to query large PDFs with 92–98% fewer tokens. Performs local hybrid search, cites exact page numbers, and keeps your documents private on your machine
-
-Ask questions of huge PDFs **locally**, inside Claude Desktop. The document never
-leaves your machine, every answer cites its page, and only the handful of
-paragraphs that answer your question are ever sent to the model — not the whole
-file. **Use 92-98% fewer tokens on average**.
+A local Claude Desktop extension to query large PDFs with **92–98%** fewer tokens. Performs local hybrid search, cites exact page numbers, and keeps your documents private on your machine
 
 Token Saver is a **one-click Claude Desktop extension** (`.mcpb`). It reads a PDF
 on your computer, finds the passages that answer your question, and hands the
