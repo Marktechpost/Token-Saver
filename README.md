@@ -1,9 +1,8 @@
 # Token Saver
 
-Ask questions of huge PDFs **locally**, inside Claude Desktop. The document never
-leaves your machine, every answer cites its page, and only the handful of
-paragraphs that answer your question are ever sent to the model — not the whole
-file. **Use 92-98% fewer tokens on average**.
+Developed at Marktechpost AI Media Inc by [Arnav Rai](https://www.linkedin.com/in/arnav-rai-475033243/) (CS student at Rochester Institute of Technology) during his internship at Marktechpost, supervised by [Jean-marc Mommessin](https://www.linkedin.com/in/contactjmm/) and [Asif Razzaq](https://www.linkedin.com/in/asifrazzaq/).
+
+A local Claude Desktop extension to query large PDFs with **92–98%** fewer tokens. Performs local hybrid search, cites exact page numbers, and keeps your documents private on your machine
 
 Token Saver is a **one-click Claude Desktop extension** (`.mcpb`). It reads a PDF
 on your computer, finds the passages that answer your question, and hands the
@@ -34,7 +33,7 @@ rather than guess** when nothing matches.
 
 No Python, no Terminal, no config files — the extension bundles everything.
 
-1. Download **`token-saver-ccr.mcpb`** from the [Releases](../../releases) page.
+1. Download **`token-saver-ccr.mcpb`** from the [Releases](https://github.com/Marktechpost/Token-Saver/releases/tag/version1) page.
 2. Claude Desktop → **Settings → Extensions → Install extension** → pick the file.
    (A red "not verified by Anthropic" warning is normal for any extension
    installed from a file — see the [install guide](INSTALL_GUIDE.md#step-1--install-the-extension).)
