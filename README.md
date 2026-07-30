@@ -1,5 +1,16 @@
 <p align="center">
-  <img src="[docs/images/your-banner-or-logo.png](https://github.com/Marktechpost/Token-Saver/blob/main/Banner/token%20saver.png)" alt="Project Banner" width="100%" />
+  <a href="https://github.com/Marktechpost/Token-Saver/releases">
+    <img src="https://img.shields.io/github/v/release/Marktechpost/Token-Saver?color=blue&label=Release" alt="Latest Release">
+  </a>
+  <a href="https://github.com/Marktechpost/Token-Saver/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/Marktechpost/Token-Saver?color=green" alt="License">
+  </a>
+  <a href="https://python.org">
+    <img src="https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white" alt="Python Version">
+  </a>
+  <a href="https://linkedin.com">
+    <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?logo=linkedin&logoColor=white" alt="LinkedIn">
+  </a>
 </p>
 
 # Token Saver
