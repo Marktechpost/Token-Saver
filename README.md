@@ -1,6 +1,6 @@
 # Token Saver
 
-Built by [Arnav Rai](https://www.linkedin.com/in/arnav-rai-475033243/) (CS student at Rochester Institute of Technology) during his internship at Marktechpost, supervised by [Jean-marc Mommessin](https://www.linkedin.com/in/contactjmm/) and [Asif Razzaq](https://www.linkedin.com/in/asifrazzaq/).
+Developed at Marktechpost AI Media Inc by [Arnav Rai](https://www.linkedin.com/in/arnav-rai-475033243/) (CS student at Rochester Institute of Technology) during his internship at Marktechpost, supervised by [Jean-marc Mommessin](https://www.linkedin.com/in/contactjmm/) and [Asif Razzaq](https://www.linkedin.com/in/asifrazzaq/).
 
 A local Claude Desktop extension to query large PDFs with **92–98%** fewer tokens. Performs local hybrid search, cites exact page numbers, and keeps your documents private on your machine
 
