@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="[docs/images/your-banner-or-logo.png](https://github.com/Marktechpost/Token-Saver/blob/main/Banner/token%20saver.png)" alt="Project Banner" width="100%" />
+</p>
+
 # Token Saver
 
 Developed at Marktechpost AI Media Inc by [Arnav Rai](https://www.linkedin.com/in/arnav-rai-475033243/) (CS student at Rochester Institute of Technology) during his internship at Marktechpost, supervised by [Jean-marc Mommessin](https://www.linkedin.com/in/contactjmm/) and [Asif Razzaq](https://www.linkedin.com/in/asifrazzaq/).
