@@ -8,7 +8,7 @@
   <a href="https://python.org">
     <img src="https://img.shields.io/badge/Python-3.10%2B-blue?style=flat-square&logo=python&logoColor=white" alt="Python Version">
   </a>
-  <a href="">
+  <a href="https://www.marktechpost.com/2026/07/30/token-saver-an-open-source-mcp-extension-using-local-hybrid-rag/">
     <img src="https://img.shields.io/badge/Blog-Read_Post-orange?style=flat-square&logo=ghost&logoColor=white" alt="Blog">
   </a>
 </p>
