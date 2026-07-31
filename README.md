@@ -48,7 +48,7 @@ rather than guess** when nothing matches.
 
 No Python, no Terminal, no config files — the extension bundles everything.
 
-1. Download **`token-saver-ccr.mcpb`** from the [Releases](https://github.com/Marktechpost/Token-Saver/releases/tag/version1) page.
+1. Download **`token-saver-ccr.mcpb`** from the [Releases](https://github.com/Marktechpost/Token-Saver/releases/tag/version1.2) page.
 2. Claude Desktop → **Settings → Extensions → Install extension** → pick the file.
    (A red "not verified by Anthropic" warning is normal for any extension
    installed from a file — see the [install guide](INSTALL_GUIDE.md#step-1--install-the-extension).)
