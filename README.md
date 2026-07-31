@@ -25,6 +25,8 @@ model just those — with page citations. Cheaper, and often *more accurate*,
 because a model buried in 200 irrelevant pages reasons worse than one handed the
 right two paragraphs.
 
+Download **`token-saver-ccr.mcpb`** from the [Releases](https://github.com/Marktechpost/Token-Saver/releases/tag/version1.2) page.
+
 ---
 
 ## The idea
